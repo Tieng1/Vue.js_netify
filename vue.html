@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Vue Project</title>
+		<meta http-equiv='content-type' content='text/html;charset=utf-8' >
+		<meta name='viewport' content='width=device-width,initial-scale=1.0'>
+		<style>
+			h1,div,p,span{font-size:33px;font-family:Arial, Helvetica, sans-serif}
+		</style>
+		<script type='text/javascript' src='vue.js'></script>
+	</head>
+	<body>
+
+		<div id='app'>
+			<p>My name is <span v-html='name'></span></p>
+		</div>
+
+		<script type='text/javascript'>
+			var model = {
+					name:'<b>OnlyThis</b>',
+			}
+			var vm = new Vue({
+				el:'#app',
+				data:model,
+			})
+
+		</script>
+	</body>
+</html>
